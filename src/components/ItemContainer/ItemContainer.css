@@ -1,0 +1,17 @@
+.Product-container img {
+    width: 250px;
+    height: auto;
+}
+
+.Product-container p {
+    font-size: 2rem;
+}
+.Product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Product-container div {
+    margin: 2rem;
+}

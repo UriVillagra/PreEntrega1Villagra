@@ -1,0 +1,30 @@
+.header {
+    background-color: aqua;
+  }
+  
+  .header_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .header_logo {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar h2 {
+    font-size: 2rem;
+  }
