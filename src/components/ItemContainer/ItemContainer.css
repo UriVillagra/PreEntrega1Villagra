@@ -1,6 +1,8 @@
 .Product-container img {
     width: 250px;
     height: auto;
+    border: solid 1px;
+    border-radius: 1rem;
 }
 
 .Product-container p {
@@ -8,10 +10,66 @@
 }
 .Product-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .Product-container div {
-    margin: 2rem;
+    margin: 4rem;
+    padding: 4rem;
+    background-color: rgb(201, 255, 255);
+    border-radius: 3rem;
+}
+
+.btn {
+    border: solid black;
+}
+
+.catalogo_conteiner_txt {
+font-size: 3rem;
+text-align: center;
+color: black;
+
+}
+
+.btn-categorias {
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 2rem;
+    border: solid black;
+    color: black;
+    padding: 1rem;
+    background-color: rgb(162, 241, 162);
+
+}
+
+.categorias-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail-container {
+    
+    height: 700px;
+}
+.detail-title {
+    font-size: 6rem;
+}
+.detail-txt {
+    font-size: 4rem;
+}
+
+.detail-img {
+    width: 500px;
+    height: 500px;
+}
+
+.detail-precio {
+    font-size: 3rem;
+}
+
+.carga {
+    font-size: 4rem;
+    font-family: fantasy;
 }

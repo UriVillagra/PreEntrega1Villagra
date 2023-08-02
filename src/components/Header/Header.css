@@ -23,8 +23,18 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    justify-content: space-around;
   }
-  
+
+.navbar__link {
+  text-decoration: none;
+}
+
   .navbar h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    color: black;
+    border: solid;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: bisque;
   }

@@ -1,50 +1,45 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import './ItemContainer.css'
-import { MOCK__DATA } from "../../data/MOCK_DATA"
+import { pedirDatos } from "../../../helpers/PedirDatos"
+import { useParams } from "react-router-dom"
+import ItemList from "../itemList/ItemList"
 
-
-const pedirDatos = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout (() => {
-            resolve(MOCK__DATA)
-        }, 2000)
-    })
-}
 
 export const ItemContainer = () => {
     const [productos, setProductos] = useState([])
+    const { categoryId} = useParams()
+    const [loading, setLoading] = useState(true)
+    console.log( categoryId )
     console.log(productos)
 
-    pedirDatos()
-        .then((res) => {
-            setProductos(res)
-        })
-        .catch((error) => {
+
+
+    useEffect (() => {
+
+        setLoading (true)
+        pedirDatos()
+            .then((res) => {
+                if (categoryId) {
+                setProductos(res.filter(prod => prod.category === categoryId))
+                }else {
+                setProductos(res)
+                }
+            })
+            .catch((error) => {
             console.log(error)
-        })
-
-
-    
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [categoryId])
 
 
     return (
-        <div className="catalogo_conteiner">
-
-            <h2>ItemContainer</h2>
-            <hr />
-            <div className="Product-container">
-                {
-                    productos.map((prod) => (
-                        <div  key={prod.id}>
-                            <h2>{prod.nombre}</h2>
-                            <img src={prod.img} alt={prod.nombre} />
-                            <p>{prod.descripcion}</p>
-                            <p>Precio: ${prod.precio}</p>
-                        </div>
-
-                    ))
-                }
-            </div>
+        <div>
+            {
+                loading ? <h2 className="carga} ">Cargando...</h2> 
+                : <ItemList productos={productos}/>
+            }
         </div>
     )
 }

@@ -1,0 +1,13 @@
+.Inicio-container h2 {
+    font-size: 7rem;
+    font-family: fantasy;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+.Inicio-container {
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+}

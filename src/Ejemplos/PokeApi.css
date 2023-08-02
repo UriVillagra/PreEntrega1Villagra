@@ -1,0 +1,31 @@
+.pokemons-img {
+    width: 20rem;
+    height: 20rem;
+}
+
+.pokemon-name {
+    font-size: 5rem;
+    font-family: fantasy;
+}
+
+.btn {
+    height: 4rem;
+    width: 8rem;
+}
+
+.pokemon-container {
+    
+    width: 30rem;
+    margin: rem;
+}
+
+.pokelist-container {
+    border: solid;
+    width: 100%;
+    background-color: antiquewhite;
+    border-radius: 2rem;
+}
+
+.Pokelist {
+    width: 100%;
+}
