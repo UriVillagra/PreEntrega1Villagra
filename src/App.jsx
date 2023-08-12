@@ -6,6 +6,7 @@ import PokeList from './Ejemplos/PokeList'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { Inicio } from './components/inicio/Inicio'
 import { ItemDetailContainer } from './components/ItemContainer/ItemDetailContainer'
+import { Contacto } from './components/Contacto/Contacto'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/' element={ <Inicio/> }/>
         <Route path="'*'" element={ <h2> pagina no existente </h2> }/>
         <Route path='/Productos' element={ <ItemContainer /> }/>
+        <Route path='/Contacto' element={ <Contacto /> }/>
         <Route path='/Productos/:categoryId' element={ <ItemContainer /> }/>
         <Route path='/pokelist' element={ <PokeList /> }/>
         <Route path="/detail/:itemId" element={ <ItemDetailContainer />}/>

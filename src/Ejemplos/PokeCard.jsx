@@ -19,7 +19,7 @@ const PokeCard = ({url}) => {
     
 
     return (
-        <div className="col-3">
+        <div className="m-4">
             {
                 pokemon && 
                 <div className="">

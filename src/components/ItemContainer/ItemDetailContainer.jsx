@@ -25,7 +25,7 @@ export const ItemDetailContainer = () => {
     }, [])
 
     return [
-        <div className="col-12 container my-5 detail-container">
+        <div className="bg-green-10 flex justify-center">
             {
                 loading ? <h2>Cargando...</h2>
                 : <ItemDetail key={item.id} item={item}/>

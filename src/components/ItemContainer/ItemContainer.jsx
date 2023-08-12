@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import './ItemContainer.css'
+// import './ItemContainer.css'
 import { pedirDatos } from "../../../helpers/PedirDatos"
 import { useParams } from "react-router-dom"
 import ItemList from "../itemList/ItemList"
@@ -35,9 +35,9 @@ export const ItemContainer = () => {
 
 
     return (
-        <div>
+        <div className="bg-cyan-50">
             {
-                loading ? <h2 className="carga} ">Cargando...</h2> 
+                loading ? <h2 className="text-4xl">Cargando...</h2> 
                 : <ItemList productos={productos}/>
             }
         </div>
